@@ -1,0 +1,1074 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: white;
+}
+
+.hero-section {
+    height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('images/2.webp');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: 500;
+    color: white;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    align-items: center;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #e9b776;
+}
+
+nav ul li a.active {
+    color: #e9b776;
+}
+
+.cta-button {
+    background-color: #e9b776;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: 500;
+}
+
+.cta-button:hover {
+    background-color: #d9a766;
+    color: white;
+}
+
+.hero-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 80%;
+}
+
+.hero-content h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 60px;
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+}
+
+.hero-content p {
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+.services-button {
+    display: inline-block;
+    background-color: #e9b776;
+    color: white;
+    padding: 15px 30px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 500;
+    transition: background-color 0.3s;
+}
+
+.services-button:hover {
+    background-color: #d9a766;
+}
+
+.scroll-down {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.circle {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.circle:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+.circle svg {
+    color: white;
+}
+
+/* Hizmetler Bölümü Stilleri */
+.services-section {
+    background-color: #1a1a1a;
+    padding: 80px 0;
+}
+
+.services-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.service-card {
+    background-color: #222;
+    width: 100%;
+    max-width: 350px;
+    border-radius: 5px;
+    overflow: hidden;
+    position: relative;
+    padding-bottom: 20px;
+}
+
+.service-image {
+    position: relative;
+    height: 200px;
+    overflow: hidden;
+}
+
+.service-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.7);
+}
+
+.service-icon {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background-color: rgba(255, 255, 255, 0.2);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.service-icon img {
+    width: 20px;
+    height: 20px;
+    filter: brightness(1);
+}
+
+.service-title {
+    font-family: 'Playfair Display', serif;
+    color: white;
+    text-align: center;
+    margin: 20px 0 5px;
+    font-size: 28px;
+}
+
+.service-price {
+    color: #e9b776;
+    text-align: center;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.service-description {
+    color: #999;
+    text-align: center;
+    padding: 0 20px;
+    margin-bottom: 20px;
+    font-size: 14px;
+}
+
+.service-options {
+    padding: 0 20px;
+}
+
+.option {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-bottom: 1px dashed rgba(255, 255, 255, 0.1);
+}
+
+.option-name {
+    color: #999;
+    font-size: 14px;
+}
+
+.option-price {
+    color: #e9b776;
+    font-weight: 500;
+}
+
+.book-now-btn {
+    display: block;
+    width: 120px;
+    text-align: center;
+    margin: 20px auto 0;
+    padding: 10px 0;
+    border: 1px dashed rgba(255, 255, 255, 0.3);
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    transition: all 0.3s;
+}
+
+.book-now-btn:hover {
+    background-color: #e9b776;
+    border-color: #e9b776;
+}
+
+/* Hakkında Bölümü Stilleri */
+.about-section {
+    background-color: #2a2a2a;
+    padding: 80px 0;
+    text-align: center;
+}
+
+.about-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.about-title {
+    font-family: 'Playfair Display', serif;
+    color: #e9b776;
+    font-size: 36px;
+    margin-bottom: 15px;
+}
+
+.about-description {
+    color: #999;
+    max-width: 600px;
+    margin: 0 auto 60px;
+    font-size: 16px;
+}
+
+.features-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.feature {
+    flex: 1;
+    text-align: center;
+}
+
+.feature-icon {
+    margin: 0 auto 20px;
+    width: 60px;
+    height: 60px;
+}
+
+.feature-icon svg {
+    width: 100%;
+    height: 100%;
+}
+
+.feature-title {
+    color: #e9b776;
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+.feature-description {
+    color: #999;
+    font-size: 14px;
+    line-height: 1.6;
+}
+/* Hikaye Bölümü Stilleri */
+.story-section {
+    background-color: #1a1a1a;
+    padding: 80px 0;
+}
+
+.story-container {
+    display: flex;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    gap: 50px;
+    align-items: center;
+}
+
+.story-content {
+    flex: 1;
+}
+
+.story-title {
+    font-family: 'Playfair Display', serif;
+    color: #e9b776;
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.story-description {
+    color: #999;
+    margin-bottom: 30px;
+    line-height: 1.6;
+    font-size: 15px;
+}
+
+.story-features {
+    list-style: none;
+    margin-bottom: 30px;
+}
+
+.story-features li {
+    color: #999;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: flex-start;
+    font-size: 15px;
+}
+
+.check-icon {
+    color: #e9b776;
+    margin-right: 10px;
+    font-weight: bold;
+}
+
+.discover-more-btn {
+    display: inline-block;
+    padding: 10px 25px;
+    border: 1px dashed rgba(255, 255, 255, 0.3);
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    transition: all 0.3s;
+}
+
+.discover-more-btn:hover {
+    background-color: #e9b776;
+    border-color: #e9b776;
+}
+
+.story-image {
+    flex: 1;
+}
+
+.story-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Müşteri Yorumları Bölümü Stilleri */
+.testimonials-section {
+    background-color: #2a2a2a;
+    padding: 80px 0;
+    position: relative;
+}
+
+.testimonial-container {
+    display: flex;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    position: relative;
+}
+
+.testimonial-content {
+    flex: 1;
+    padding: 50px 0;
+    position: relative;
+}
+
+.quote-icon {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.testimonial-text {
+    color: white;
+    font-size: 18px;
+    line-height: 1.8;
+    margin-bottom: 30px;
+    position: relative;
+    z-index: 1;
+    max-width: 90%;
+    font-style: italic;
+}
+
+.testimonial-author {
+    margin-bottom: 30px;
+}
+
+.author-name {
+    color: #e9b776;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.rating {
+    display: flex;
+}
+
+.star {
+    color: #e9b776;
+    margin-right: 5px;
+    font-size: 18px;
+}
+
+.testimonial-nav {
+    display: flex;
+    gap: 10px;
+}
+
+.nav-dot {
+    width: 30px;
+    height: 3px;
+    background-color: rgba(255, 255, 255, 0.2);
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.nav-dot.active {
+    background-color: #e9b776;
+}
+
+.testimonial-image {
+    flex: 1;
+    position: relative;
+}
+
+.testimonial-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Galeri Bölümü Stilleri */
+.gallery-section {
+    background-color: #1a1a1a;
+    padding: 80px 0;
+    text-align: center;
+}
+
+.gallery-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.gallery-title {
+    font-family: 'Playfair Display', serif;
+    color: #e9b776;
+    font-size: 36px;
+    margin-bottom: 15px;
+}
+
+.gallery-description {
+    color: #999;
+    max-width: 600px;
+    margin: 0 auto 40px;
+    font-size: 16px;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    margin-bottom: 40px;
+}
+
+.gallery-item {
+    overflow: hidden;
+    border-radius: 5px;
+    height: 200px;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.05);
+}
+
+.gallery-social {
+    color: #999;
+    font-size: 16px;
+}
+
+.gallery-social a {
+    color: #e9b776;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.gallery-social a:hover {
+    color: white;
+}
+/* SSS Bölümü Stilleri */
+.faq-section {
+    background-color: #1a1a1a;
+    padding: 80px 0;
+    text-align: center;
+}
+
+.faq-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.faq-title {
+    font-family: 'Playfair Display', serif;
+    color: #e9b776;
+    font-size: 36px;
+    margin-bottom: 15px;
+}
+
+.faq-description {
+    color: #999;
+    max-width: 600px;
+    margin: 0 auto 50px;
+    font-size: 16px;
+}
+
+.faq-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    text-align: left;
+}
+
+.faq-item {
+    background-color: #222;
+    padding: 30px;
+    border-radius: 5px;
+}
+
+.faq-question {
+    color: #e9b776;
+    font-size: 18px;
+    margin-bottom: 15px;
+    font-weight: 500;
+}
+
+.faq-answer {
+    color: #999;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+/* Mobil Cihazlar İçin Responsive Tasarım */
+@media (max-width: 768px) {
+    .faq-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.faq-image {
+    flex: 1;
+}
+
+.faq-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.faq-content {
+    flex: 1;
+}
+
+.faq-title {
+    font-family: 'Playfair Display', serif;
+    color: #e9b776;
+    font-size: 32px;
+    margin-bottom: 15px;
+}
+
+.faq-subtitle {
+    color: #999;
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.faq-description {
+    color: #999;
+    line-height: 1.6;
+    margin-bottom: 30px;
+    font-size: 15px;
+}
+
+.faq-items {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.faq-item {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding-bottom: 15px;
+    cursor: pointer;
+}
+
+.faq-question {
+    color: white;
+    font-size: 16px;
+    font-weight: 400;
+    position: relative;
+}
+
+.faq-question:hover {
+    color: #e9b776;
+}
+
+/* Randevu Formu Bölümü Stilleri */
+.appointment-section {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('appointment-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    padding: 80px 0;
+    position: relative;
+}
+
+.appointment-overlay {
+    width: 100%;
+    height: 100%;
+}
+
+.appointment-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 20px;
+    text-align: center;
+}
+
+.appointment-title {
+    font-family: 'Playfair Display', serif;
+    color: white;
+    font-size: 36px;
+    margin-bottom: 15px;
+}
+
+.appointment-description {
+    color: #999;
+    max-width: 600px;
+    margin: 0 auto 40px;
+    font-size: 16px;
+}
+
+.appointment-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.form-row {
+    display: flex;
+    gap: 15px;
+}
+
+.form-row input,
+.form-row select,
+.appointment-form textarea {
+    flex: 1;
+    background-color: rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 15px;
+    color: white;
+    border-radius: 3px;
+}
+
+.form-row input::placeholder,
+.form-row select::placeholder,
+.appointment-form textarea::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.appointment-form textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+.book-appointment-btn {
+    background-color: #e9b776;
+    color: white;
+    border: none;
+    padding: 15px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 10px;
+}
+
+.book-appointment-btn:hover {
+    background-color: #d9a766;
+}
+
+/* Footer Bölümü Stilleri */
+.footer-section {
+    background-color: #1a1a1a;
+    padding: 60px 0 20px;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.footer-info {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 40px;
+}
+
+.footer-column {
+    flex: 1;
+    padding: 0 15px;
+}
+
+.footer-icon {
+    margin-bottom: 15px;
+}
+
+.footer-title {
+    color: white;
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.footer-list {
+    list-style: none;
+}
+
+.footer-list li,
+.footer-text {
+    color: #999;
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+.social-icons {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.social-icon {
+    display: inline-block;
+    width: 36px;
+    height: 36px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s;
+}
+
+.social-icon:hover {
+    background-color: rgba(233, 183, 118, 0.2);
+}
+
+.footer-copyright {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 20px;
+    text-align: center;
+}
+
+.footer-copyright p {
+    color: #666;
+    font-size: 14px;
+}
+
+/* Mobil Cihazlar İçin Responsive Tasarım */
+@media (max-width: 768px) {
+    .form-row {
+        flex-direction: column;
+    }
+    
+    .footer-info {
+        flex-direction: column;
+        gap: 30px;
+    }
+}
+
+/* Animasyon Stilleri */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideInLeft {
+    from { transform: translateX(-50px); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes slideInRight {
+    from { transform: translateX(50px); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes slideInUp {
+    from { transform: translateY(50px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+    40% { transform: translateY(-20px); }
+    60% { transform: translateY(-10px); }
+}
+
+@keyframes rotate {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+/* Animasyon Sınıfları */
+.fade-in {
+    animation: fadeIn 1s ease forwards;
+}
+
+.slide-in-left {
+    animation: slideInLeft 1s ease forwards;
+}
+
+.slide-in-right {
+    animation: slideInRight 1s ease forwards;
+}
+
+.slide-in-up {
+    animation: slideInUp 1s ease forwards;
+}
+
+.pulse {
+    animation: pulse 2s infinite;
+}
+
+.bounce {
+    animation: bounce 2s infinite;
+}
+
+.rotate {
+    animation: rotate 5s linear infinite;
+}
+
+/* Animasyon Gecikmeleri */
+.delay-100 {
+    animation-delay: 0.1s;
+}
+
+.delay-200 {
+    animation-delay: 0.2s;
+}
+
+.delay-300 {
+    animation-delay: 0.3s;
+}
+
+.delay-400 {
+    animation-delay: 0.4s;
+}
+
+.delay-500 {
+    animation-delay: 0.5s;
+}
+
+/* Görünürlük Sınıfları */
+.hidden {
+    opacity: 0;
+}
+
+.visible {
+    opacity: 1;
+    transition: opacity 0.5s ease;
+}
+
+/* Hover Animasyonları */
+.hover-scale {
+    transition: transform 0.3s ease;
+}
+
+.hover-scale:hover {
+    transform: scale(1.05);
+}
+
+.hover-rotate {
+    transition: transform 0.3s ease;
+}
+
+.hover-rotate:hover {
+    transform: rotate(5deg);
+}
+
+.hover-bright {
+    transition: filter 0.3s ease;
+}
+
+.hover-bright:hover {
+    filter: brightness(1.2);
+}
+
+/* Özel Bileşen Animasyonları */
+.hero-content h1 {
+    animation: slideInLeft 1s ease forwards;
+}
+
+.hero-content p {
+    animation: slideInLeft 1s ease 0.2s forwards;
+    opacity: 0;
+}
+
+.services-button {
+    animation: slideInLeft 1s ease 0.4s forwards;
+    opacity: 0;
+}
+
+.scroll-down {
+    animation: bounce 2s infinite;
+}
+
+.service-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.service-icon {
+    animation: pulse 2s infinite;
+}
+
+.feature-icon {
+    animation: pulse 2s infinite;
+}
+
+.feature {
+    transition: transform 0.3s ease;
+}
+
+.feature:hover {
+    transform: translateY(-5px);
+}
+
+.story-image img {
+    transition: transform 0.5s ease;
+}
+
+.story-image:hover img {
+    transform: scale(1.05);
+}
+
+.testimonial-text {
+    position: relative;
+}
+
+.testimonial-text::before {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -10px;
+    left: 0;
+    background-color: #e9b776;
+    transition: width 0.5s ease;
+}
+
+.testimonial-content:hover .testimonial-text::before {
+    width: 50px;
+}
+
+.gallery-item {
+    overflow: hidden;
+}
+
+.gallery-item img {
+    transition: transform 0.5s ease;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.1);
+}
+
+.faq-item {
+    transition: background-color 0.3s ease;
+}
+
+.faq-item:hover {
+    background-color: #2a2a2a;
+}
+
+.book-appointment-btn {
+    position: relative;
+    overflow: hidden;
+}
+
+.book-appointment-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.7s ease;
+}
+
+.book-appointment-btn:hover::before {
+    left: 100%;
+}
+
+.social-icon {
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.social-icon:hover {
+    transform: rotate(360deg);
+}
