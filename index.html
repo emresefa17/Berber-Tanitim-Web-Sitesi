@@ -11,7 +11,10 @@
     <div class="hero-section">
         <header>
             <div class="logo">SalesPage</div>
-            <nav>
+            <button class="menu-toggle" aria-label="Menüyü Aç/Kapat">
+                <span></span><span></span><span></span>
+            </button>
+            <nav class="mobile-nav">
                 <ul>
                     <li><a href="#" class="active">Home</a></li>
                     <li><a href="#">Services</a></li>
@@ -41,7 +44,7 @@
     </div>
 
     <!-- Hizmetler Bölümü -->
-    <section id="services" class="services-section">
+    <section id="services" class="services-section animate-on-scroll hidden">
         <div class="services-container">
             <!-- The Shave Kartı -->
             <div class="service-card">
@@ -138,7 +141,7 @@
     <!-- Hizmetler Bölümünün altına eklenecek -->
     
     <!-- Hakkında Bölümü -->
-    <section id="about" class="about-section">
+    <section id="about" class="about-section animate-on-scroll hidden">
         <div class="about-container">
             <h2 class="about-title">About Barber Shop</h2>
             <p class="about-description">Quis autem velis etis reprehender net etid quiste voluptate.</p>
@@ -178,7 +181,7 @@
     </section>
 
     <!-- Hikaye Bölümü -->
-    <section id="story" class="story-section">
+    <section id="story" class="story-section animate-on-scroll hidden">
         <div class="story-container">
             <div class="story-content">
                 <h2 class="story-title">Discover our story</h2>
@@ -200,7 +203,7 @@
     </section>
 
     <!-- Müşteri Yorumları Bölümü -->
-    <section id="testimonials" class="testimonials-section">
+    <section id="testimonials" class="testimonials-section animate-on-scroll hidden">
         <div class="testimonial-container">
             <div class="testimonial-content">
                 <div class="quote-icon">
@@ -236,7 +239,7 @@
     </section>
 
     <!-- Galeri Bölümü -->
-    <section id="gallery" class="gallery-section">
+    <section id="gallery" class="gallery-section animate-on-scroll hidden">
         <div class="gallery-container">
             <h2 class="gallery-title">Our Gallery</h2>
             <p class="gallery-description">Quis autem velis etis reprehender voluptate.</p>
@@ -267,7 +270,7 @@
     </section>
 
     <!-- SSS Bölümü -->
-    <section id="faq" class="faq-section">
+    <section id="faq" class="faq-section animate-on-scroll hidden">
         <div class="faq-container">
             <h2 class="faq-title">Frequently Asked Questions</h2>
             <p class="faq-description">Quis autem velis etis reprehender net etid quiste voluptate.</p>
@@ -306,7 +309,7 @@
   
 
     <!-- Randevu Formu Bölümü -->
-    <section id="appointment" class="appointment-section">
+    <section id="appointment" class="appointment-section animate-on-scroll hidden">
         <div class="appointment-overlay">
             <div class="appointment-container">
                 <h2 class="appointment-title">Book An Appointment</h2>
@@ -414,6 +417,10 @@
                 if (isVisible) {
                     element.classList.add('visible');
                     element.classList.remove('hidden');
+                    // slide-in-left animasyonunu da ekle
+                    if (!element.classList.contains('slide-in-left')) {
+                        element.classList.add('slide-in-left');
+                    }
                 }
             });
         }
@@ -428,7 +435,7 @@
                 card.classList.add('animate-on-scroll', 'hidden');
                 card.style.animationDelay = `${index * 0.2}s`;
                 setTimeout(() => {
-                    card.classList.add('slide-in-up');
+                    card.classList.add('slide-in-left');
                     card.classList.add('visible');
                 }, 300 + (index * 200));
             });
@@ -519,12 +526,21 @@
             const sectionTitles = document.querySelectorAll('h2.about-title, h2.story-title, h2.gallery-title, h2.faq-title, h2.appointment-title');
             sectionTitles.forEach(title => {
                 title.classList.add('animate-on-scroll', 'hidden');
-                title.classList.add('slide-in-up');
+                title.classList.add('slide-in-left');
             });
             
             // İlk kontrol
             checkVisibility();
         });
+
+        // Hamburger menü aç/kapa
+        const menuToggle = document.querySelector('.menu-toggle');
+        const nav = document.querySelector('nav');
+        if(menuToggle && nav) {
+            menuToggle.addEventListener('click', () => {
+                nav.classList.toggle('open');
+            });
+        }
     </script>
 </body>
 </html>
